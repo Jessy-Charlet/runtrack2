@@ -7,16 +7,16 @@
 </head>
 
 <body>
-    <table>
+
 <?php
 $str = "Les choses que l'on possede finissent par nous posseder";
 $count = 0;
 $x = 0;
 
-do {
+while (isset($str[$count])) {
     $count ++;
-} while (isset($str[$count]));
-
+}
+$count --;
 while ($count >= $x){
 
     echo $str[$count];

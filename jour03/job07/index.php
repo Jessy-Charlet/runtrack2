@@ -9,16 +9,25 @@
 <body>
 
 <?php
-$str = "Tous ces instants seront perdus dans le temps comme les larmes sous la pluie.";
-$x = 0;
-$count = 0;
-while (isset($str[$count])){
+$str = "Certaines choses changent, et d'autres ne changeront jamais.";
+$count = 1;
+$x = 1;
+
+while (isset($str[$count])) {
     $count ++;
 }
+$count -- ;
 while ($x <= $count){
+    if ($x == 1){
+        echo ucfirst($str[$x]);
+    }
+    else {
     echo $str[$x];
-    $x += 2;
+    }
+    $x ++;
 }
+$x = 0;
+echo strtolower($str[$x]);
 ?>
 
 </body>

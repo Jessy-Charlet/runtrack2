@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <table>
+
 <?php
 $str = "I'm sorry Dave I'm afraid I can't do that";
 $x = 0;
@@ -19,7 +19,11 @@ $y = "y";
 $o = "o";
 $u = "u";
 
-while ($x < strlen($str)){
+$count = 0;
+while (isset($str[$count])){
+    $count ++;
+}
+while ($x < $count){
     if ($str[$x] == $a or $str[$x] == $e or $str[$x] == $i or $str[$x] == $o or $str[$x] == $u
     or $str[$x] == $I or $str[$x] == $y){
         echo $str[$x];
@@ -29,6 +33,6 @@ while ($x < strlen($str)){
     $x ++;
 }
 ?>
-</table>
+
 </body>
 </html>
