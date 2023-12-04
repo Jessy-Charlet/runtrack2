@@ -12,10 +12,10 @@
 $X =  array(200, 204, 173, 98, 171, 404, 459);
 foreach ($X as $X) {
     if ($X %2) {
-        $texte = "paire";
+        $texte = "pair";
     }
     else {
-        $texte = "impaire";
+        $texte = "impair";
     }
     echo "<tr><td style=\"border: 1px solid grey;\">" . $X . " est " . $texte . "</td></tr>";
 }
