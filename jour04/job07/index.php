@@ -22,17 +22,25 @@ if (isset($_GET['ok'])) {
     $hauteur = intval($_GET["hauteur"]);
 
  //--------toit de la maison-----------
- $b = $hauteur;
- for ($i = 0; $i < ($hauteur); $i++) {
-    for ($c = ($largeur - $i); $c >= 0; $c--) {
-        echo "&nbsp&nbsp";
+
+ for ($i = 0; $i <= $hauteur; $i++) {
+    $prefixeEspace = ($hauteur-$i)*2;
+    $interEspace = $i*2;
+    $texte= "";
+
+    for ($j = 1; $j <= $prefixeEspace; $j++) {
+        $texte = $texte . "&nbsp";
     }
-    echo "/";
-    for ($c = 0; $c <= $largeur; $c++) {
-        echo "_";
+    $texte = $texte."/";
+    
+    for ($j = 1; $j <= $interEspace; $j++) {
+            $texte = $texte."_";
     }
-echo "\\<br>";
- }
+    $texte = $texte. "\\";
+    echo $texte."<br>";
+}
+
+
 
 
 
