@@ -1,0 +1,61 @@
+body {
+    background-color: pink;
+}
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+   div {
+    width: 50vw;
+    background-color: fuchsia;
+    padding: 10%;
+    text-align: center;
+    margin: 20vh auto;
+    border: 8px dotted white;
+    border-radius: 80px;
+    box-shadow: 0 0 100px fuchsia;
+}
+h1 {
+    font-size: 2em;
+    color: white;
+    font-weight: 100;
+}
+label {
+    font-size: 1.2em;
+    color: white;
+    font-weight: 100;
+}
+input[type=submit] {
+    text-decoration: none;
+    color: fuchsia;
+    font-size: 1.5em;
+    background-color: white;
+    border-radius: 5px;
+    border: 3px dashed pink;
+    margin: 5%;
+    padding: 2%;
+}
+select {
+    text-decoration: none;
+    color: fuchsia;
+    background-color: white;
+    border-radius: 5px;
+    border: 3px dashed pink;
+    margin-left: 5%;
+    padding: 1%;
+}
+
+select > option:first-child {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+}
+select > option:nth-child(2) {
+    text-decoration: none;
+    background-color: rgb(25,25,25);
+    color: rgb(100,255,255);
+}
+select > option:last-child {
+    text-decoration: none;
+    background-color: pink;
+    color: fuchsia;
+}

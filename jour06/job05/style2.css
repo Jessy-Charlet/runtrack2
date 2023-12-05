@@ -1,0 +1,57 @@
+body {
+    background-color: rgb(25,25,25);
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+   div {
+    width: 50vw;
+    background-color: rgb(35,35,35);
+    padding: 10%;
+    text-align: center;
+    margin: 20vh auto;
+    border: 5px solid rgb(100,255,255);
+}
+h1 {
+    font-size: 2em;
+    color: rgb(100,255,255);
+    font-weight: 100;
+}
+label {
+    font-size: 1.2em;
+    color: white;
+    font-weight: 100;
+}
+input[type=submit] {
+    text-decoration: none;
+    color: rgb(100,255,255);
+    text-transform: uppercase;
+    background-color: rgb(25,25,25);
+    border-radius: 5px;
+    border: 3px solid rgb(100,255,255);
+    margin: 5%;
+    padding: 2%;
+}
+select {
+    text-decoration: none;
+    color: rgb(100,255,255);
+    background-color: rgb(25,25,25);
+    border-radius: 5px;
+    border: 3px solid rgb(100,255,255);
+    margin-left: 5%;
+    padding: 1%;
+}
+
+select > option:first-child {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+}
+select > option:nth-child(2) {
+    text-decoration: none;
+    background-color: rgb(25,25,25);
+    color: rgb(100,255,255);
+}
+select > option:last-child {
+    text-decoration: none;
+    background-color: pink;
+    color: fuchsia;
+}
