@@ -9,7 +9,7 @@
 <body>
 
 <?php
-$str = "I'm sorry Dave I'm afraid I can't do that";
+$str = "I'm Asorry Dave I'm afraid I can't do that";
 $x = 0;
 $a = "a";
 $e = "e";

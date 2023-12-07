@@ -11,7 +11,7 @@
 <?php
 $X =  array(200, 204, 173, 98, 171, 404, 459);
 foreach ($X as $X) {
-    if ($X %2) {
+    if ($X %2 ==0) {
         $texte = "pair";
     }
     else {
