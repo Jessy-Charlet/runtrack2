@@ -1,13 +1,22 @@
 <?php
+
 session_start();
-$_SESSION[] = "prenom";
 
-if (isset($_POST["prenom"])){
-    $_SESSION["prenom"][] = $_POST("prenom");
+$prenoms = $_SESSION["nom"] ?? [];
 
+if($_SERVER['REQUEST_METHOD'] === 'GET' and $_GET['nom'] != null){
+    if(isset($_GET['nom'])) {
+        $prenoms[] = $_GET['nom'];
+        $_SESSION['nom'] = $prenoms;
+    }
 }
-
-
+if($_SERVER['REQUEST_METHOD'] === 'GET' and $_GET['nom'] == null){
+    echo "<p style='color: red; font-weight: 900;'>Merci d'inscrire un prénom.</p>";
+}
+if(isset($_GET['reset'])) {
+    $_SESSION['nom'] = [];
+    $prenoms= [];
+}
 ?>
 
 
@@ -23,16 +32,17 @@ if (isset($_POST["prenom"])){
 
 <body>
 
-<form method="post" action="index.php">
+<form method="get" action="index.php">
     <label for="prenom"></label>
-    <input type="text" name="prenom" placeholder="Prénom"><br>
-    <input type="checkbox" id="reset" name="reset" value="reset" />
-    <label for="reset">Vider la liste.</label><br>
+    <input type="text" name="nom" placeholder="Prénom"><br>
     <input type="submit" name="valider" value="Valider">
+    <input type="submit" name="reset" value="Reset">
 </form>
 
 <?php
-echo $_SESSION["prenom"];
+    foreach($prenoms as $prenom) {
+        echo "<li>$prenom</li>";
+    }
 ?>
 </body>
 
